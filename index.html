@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raw Georgian Honey | Pure Nature's Gold</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&family=Raleway:wght@300;400;500;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --golden: #d4a017;
+            --amber: #ffbf00;
+            --light-amber: #f9e076;
+            --dark-amber: #c28f1d;
+            --brown: #5d4037;
+            --light-brown: #8d6e63;
+            --cream: #fff9e6;
+            --dark-cream: #f5e8c9;
+            --white: #ffffff;
+            --black: #333333;
+            --honeycomb: #f8e8c0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Raleway', sans-serif;
+            color: var(--black);
+            background-color: var(--cream);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--brown);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--amber), var(--dark-amber));
+            color: var(--white);
+            padding: 14px 35px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-decoration: none;
+            box-shadow: 0 8px 20px rgba(194, 143, 29, 0.3);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+            z-index: -1;
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(194, 143, 29, 0.4);
+        }
+        
+        .btn:hover:before {
+            left: 100%;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+        }
+        
+        header.scrolled {
+            padding: 10px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transform: translateY(0);
+            transition: transform 0.4s ease;
+        }
+        
+        .logo-container:hover {
+            transform: translateY(-3px);
+        }
+        
+        .logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--golden);
+            box-shadow: 0 4px 10px rgba(212, 160, 23, 0.3);
+            transition: all 0.4s ease;
+        }
+        
+        .logo-container:hover .logo {
+            transform: rotate(15deg);
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.8rem;
+            color: var(--brown);
+            letter-spacing: 1px;
+        }
+        
+        .logo-text span {
+            font-size: 0.8rem;
+            color: var(--light-brown);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--brown);
+            font-weight: 600;
+            font-size: 1.1rem;
+            position: relative;
+            padding: 5px 0;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--golden);
+            transition: width 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+        }
+        
+        nav ul li a:hover {
+            color: var(--golden);
+        }
+        
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+        
+        .mobile-menu {
+            display: none;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(93, 64, 55, 0.6), rgba(93, 64, 55, 0.6)), url('honey/images/honey_background.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 80px;
+            margin-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            padding: 40px;
+            background-color: rgba(255, 249, 230, 0.85);
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            transform: translateY(30px);
+            opacity: 0;
+            animation: fadeUp 1s forwards 0.3s;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-content h2 {
+            font-size: 4.5rem;
+            margin-bottom: 20px;
+            color: var(--brown);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            line-height: 1.1;
+        }
+        
+        .hero-content p {
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+            color: var(--black);
+            font-weight: 300;
+        }
+        
+        .hero-honey-drips {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .honey-drip {
+            position: absolute;
+            top: -100px;
+            width: 40px;
+            height: 100px;
+            background: linear-gradient(to bottom, var(--amber), var(--dark-amber));
+            border-radius: 0 0 20px 20px;
+            animation: drip 8s infinite ease-in;
+        }
+        
+        .drip-1 {
+            left: 15%;
+            animation-delay: 0.5s;
+            width: 30px;
+            height: 120px;
+        }
+        
+        .drip-2 {
+            left: 35%;
+            animation-delay: 1.5s;
+            width: 35px;
+            height: 150px;
+        }
+        
+        .drip-3 {
+            left: 65%;
+            animation-delay: 2.5s;
+            width: 25px;
+            height: 110px;
+        }
+        
+        .drip-4 {
+            left: 85%;
+            animation-delay: 3.5s;
+            width: 40px;
+            height: 130px;
+        }
+        
+        @keyframes fadeUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes drip {
+            0% {
+                transform: translateY(0);
+                opacity: 0;
+            }
+            5% {
+                opacity: 1;
+            }
+            95% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 120px 0;
+            background-color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .features .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .features h2 {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 70px;
+            position: relative;
+            transform: translateY(30px);
+            opacity: 0;
+            animation: fadeUp 0.8s forwards 0.6s;
+        }
+        
+        .features h2:after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background-color: var(--golden);
+            border-radius: 2px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .feature-card {
+            background-color: var(--cream);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform: translateY(30px);
+            opacity: 0;
+        }
+        
+        .feature-card:nth-child(1) {
+            animation: fadeUp 0.8s forwards 0.8s;
+        }
+        
+        .feature-card:nth-child(2) {
+            animation: fadeUp 0.8s forwards 1.0s;
+        }
+        
+        .feature-card:nth-child(3) {
+            animation: fadeUp 0.8s forwards 1.2s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 15px 40px rgba(194, 143, 29, 0.15);
+        }
+        
+        .feature-icon {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, var(--light-amber), var(--golden));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2.5rem;
+            color: var(--white);
+            box-shadow: 0 8px 20px rgba(212, 160, 23, 0.3);
+        }
+        
+        .feature-card h3 {
+            font-size: 1.7rem;
+            margin-bottom: 20px;
+            color: var(--brown);
+        }
+        
+        .feature-card p {
+            font-size: 1.1rem;
+            color: var(--light-brown);
+        }
+        
+        /* Honeycomb Background */
+        .honeycomb-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            background-image: 
+                radial-gradient(circle at 50% 50%, var(--honeycomb) 10%, transparent 10.5%),
+                radial-gradient(circle at 50% 50%, var(--honeycomb) 10%, transparent 10.5%);
+            background-size: 100px 100px;
+            background-position: 0 0, 50px 50px;
+            z-index: 1;
+            animation: honeycombMove 40s infinite linear;
+        }
+        
+        @keyframes honeycombMove {
+            0% {
+                background-position: 0 0, 50px 50px;
+            }
+            100% {
+                background-position: 1000px 0, 1050px 50px;
+            }
+        }
+        
+        /* Products Section */
+        .products {
+            padding: 120px 0;
+            background: linear-gradient(to bottom, var(--cream), var(--dark-cream));
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .products h2 {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 70px;
+            position: relative;
+            transform: translateY(30px);
+            opacity: 0;
+            animation: fadeUp 0.8s forwards 0.6s;
+        }
+        
+        .products h2:after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background-color: var(--golden);
+            border-radius: 2px;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+        
+        .product-card {
+            background-color: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform: translateY(30px);
+            opacity: 0;
+            position: relative;
+        }
+        
+        .product-card:nth-child(1) {
+            animation: fadeUp 0.8s forwards 0.8s;
+        }
+        
+        .product-card:nth-child(2) {
+            animation: fadeUp 0.8s forwards 1.0s;
+        }
+        
+        .product-card:nth-child(3) {
+            animation: fadeUp 0.8s forwards 1.2s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 50px rgba(194, 143, 29, 0.2);
+        }
+        
+        .product-img {
+            height: 280px;
+            background: linear-gradient(135deg, var(--light-amber), var(--golden));
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .honey-jar {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 180px;
+            height: 240px;
+            background: linear-gradient(to bottom, var(--light-amber), var(--amber));
+            border-radius: 40% 40% 30% 30%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .honey-jar:before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 120px;
+            border: 10px solid var(--light-brown);
+            border-radius: 50%;
+        }
+        
+        .honey-jar:after {
+            content: '';
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 8px;
+            background-color: var(--light-brown);
+            border-radius: 4px;
+        }
+        
+        .honey-jar .honey-fill {
+            position: absolute;
+            bottom: 25px;
+            left: 15px;
+            right: 15px;
+            height: 80%;
+            background: linear-gradient(to bottom, var(--dark-amber), var(--amber));
+            border-radius: 30px;
+            animation: honeyFlow 4s infinite alternate;
+        }
+        
+        @keyframes honeyFlow {
+            0% {
+                height: 80%;
+            }
+            100% {
+                height: 85%;
+            }
+        }
+        
+        .product-info {
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .product-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--brown);
+        }
+        
+        .product-info p {
+            color: var(--light-brown);
+            margin-bottom: 20px;
+        }
+        
+        .product-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 25px;
+        }
+        
+        .price {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--brown);
+        }
+        
+        .rating {
+            color: var(--golden);
+            font-size: 1.2rem;
+        }
+        
+        /* Health Benefits */
+        .benefits {
+            padding: 120px 0;
+            background-color: var(--white);
+            position: relative;
+        }
+        
+        .benefits .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .benefits-content {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .benefits-content h2 {
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            position: relative;
+            transform: translateX(-30px);
+            opacity: 0;
+            animation: fadeInLeft 0.8s forwards 0.6s;
+        }
+        
+        .benefits-content h2:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 100px;
+            height: 4px;
+            background-color: var(--golden);
+            border-radius: 2px;
+        }
+        
+        .benefits-content p {
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            transform: translateX(-30px);
+            opacity: 0;
+            animation: fadeInLeft 0.8s forwards 0.8s;
+        }
+        
+        .benefits-list {
+            list-style: none;
+            margin-top: 30px;
+        }
+        
+        .benefits-list li {
+            margin-bottom: 20px;
+            padding-left: 35px;
+            position: relative;
+            font-size: 1.1rem;
+            transform: translateX(-30px);
+            opacity: 0;
+        }
+        
+        .benefits-list li:nth-child(1) {
+            animation: fadeInLeft 0.8s forwards 1.0s;
+        }
+        
+        .benefits-list li:nth-child(2) {
+            animation: fadeInLeft 0.8s forwards 1.2s;
+        }
+        
+        .benefits-list li:nth-child(3) {
+            animation: fadeInLeft 0.8s forwards 1.4s;
+        }
+        
+        .benefits-list li:nth-child(4) {
+            animation: fadeInLeft 0.8s forwards 1.6s;
+        }
+        
+        .benefits-list li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 25px;
+            height: 25px;
+            background-color: var(--light-amber);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--brown);
+            font-weight: bold;
+        }
+        
+        .benefits-image {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+            transform: translateX(30px);
+            opacity: 0;
+            animation: fadeInRight 0.8s forwards 0.8s;
+        }
+        
+        .benefits-honeycomb {
+            width: 100%;
+            height: 500px;
+            background: 
+                radial-gradient(circle at 50% 50%, var(--honeycomb) 12%, transparent 12.5%),
+                radial-gradient(circle at 50% 50%, var(--honeycomb) 12%, transparent 12.5%);
+            background-size: 100px 100px;
+            background-position: 0 0, 50px 50px;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        
+        .honeycomb-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(245, 232, 201, 0.6), rgba(212, 160, 23, 0.3));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(2px);
+        }
+        
+        .honeycomb-overlay h3 {
+            font-size: 2.5rem;
+            color: var(--brown);
+            text-align: center;
+            max-width: 80%;
+            text-shadow: 0 2px 4px rgba(255,255,255,0.5);
+        }
+        
+        @keyframes fadeInLeft {
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeInRight {
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 120px 0;
+            background: linear-gradient(to bottom, var(--dark-cream), var(--cream));
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonials h2 {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 70px;
+            position: relative;
+        }
+        
+        .testimonials h2:after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background-color: var(--golden);
+            border-radius: 2px;
+        }
+        
+        .testimonial-slider {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonial {
+            text-align: center;
+        }
+        
+        .testimonial .quote {
+            font-size: 1.4rem;
+            font-style: italic;
+            color: var(--light-brown);
+            margin-bottom: 30px;
+            line-height: 1.8;
+            position: relative;
+        }
+        
+        .testimonial .quote:before,
+        .testimonial .quote:after {
+            content: '"';
+            font-size: 4rem;
+            color: var(--light-amber);
+            position: absolute;
+            opacity: 0.3;
+        }
+        
+        .testimonial .quote:before {
+            top: -30px;
+            left: -20px;
+        }
+        
+        .testimonial .quote:after {
+            bottom: -60px;
+            right: -20px;
+        }
+        
+        .customer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .customer-img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: var(--light-amber);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--brown);
+        }
+        
+        .customer-info h4 {
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+        }
+        
+        .customer-info p {
+            color: var(--light-brown);
+            font-size: 0.9rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(rgba(93, 64, 55, 0.85), rgba(93, 64, 55, 0.85)), url('images\honey_background.jpg') center/cover no-repeat;
+            color: var(--white);
+            padding: 100px 0 0;
+            position: relative;
+        }
+        
+        footer .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .footer-logo {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .footer-logo img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid var(--golden);
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+        
+        .footer-logo p {
+            font-size: 1.1rem;
+            max-width: 300px;
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+        
+        .footer-links {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .footer-links h3 {
+            color: var(--white);
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-links h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--golden);
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links ul li {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .footer-links ul li a:hover {
+            color: var(--golden);
+            transform: translateX(5px);
+        }
+        
+        .footer-links ul li a i {
+            color: var(--golden);
+            font-size: 0.9rem;
+        }
+        
+        .newsletter {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .newsletter h3 {
+            color: var(--white);
+            margin-bottom: 25px;
+            font-size: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .newsletter h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--golden);
+        }
+        
+        .newsletter p {
+            margin-bottom: 20px;
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+        
+        .newsletter form {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .newsletter input {
+            flex: 1;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+        }
+        
+        .newsletter input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .newsletter button {
+            padding: 14px 25px;
+            border: none;
+            border-radius: 50px;
+            background: var(--golden);
+            color: var(--white);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .newsletter button:hover {
+            background: var(--amber);
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .social-icons a {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+        
+        .social-icons a:hover {
+            background: var(--golden);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding: 30px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .copyright p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+        
+        .footer-honey-drips {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .benefits .container {
+                flex-direction: column;
+            }
+            
+            .benefits-content, .benefits-image {
+                min-width: 100%;
+            }
+            
+            .hero-content h2 {
+                font-size: 3.5rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: block;
+                color: var(--brown);
+                font-size: 1.8rem;
+            }
+            
+            .hero-content {
+                padding: 30px 20px;
+            }
+            
+            .hero-content h2 {
+                font-size: 2.8rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.3rem;
+            }
+            
+            .btn {
+                padding: 12px 30px;
+            }
+            
+            .footer .container {
+                flex-direction: column;
+                gap: 40px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo-text h1 {
+                font-size: 1.5rem;
+            }
+            
+            .hero-content h2 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+            
+            .features-grid, .product-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .newsletter form {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="logo-container">
+                <img src="images\logo.jpg" alt="Raw Georgian Honey Logo" class="logo">
+                <div class="logo-text">
+                    <h1>Raw Georgian Honey</h1>
+                    <span>Pure Nature's Gold</span>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-honey-drips">
+            <div class="honey-drip drip-1"></div>
+            <div class="honey-drip drip-2"></div>
+            <div class="honey-drip drip-3"></div>
+            <div class="honey-drip drip-4"></div>
+        </div>
+        <div class="hero-content">
+            <h2>Pure. Natural. Unprocessed.</h2>
+            <p>Experience the authentic taste of Georgia's wildflower meadows</p>
+            <button class="btn buy-now">Discover Our Honey</button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="honeycomb-bg"></div>
+        <div class="container">
+            <h2>Why Our Honey Is Special</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>100% Organic</h3>
+                    <p>Harvested from pristine wildflower meadows in the Caucasus mountains, free from pesticides and chemicals.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Handcrafted</h3>
+                    <p>Each batch is carefully processed using traditional methods to preserve nutrients and enzymes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Award Winning</h3>
+                    <p>Recognized internationally for exceptional quality, taste, and purity standards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2>Our Premium Collection</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <div class="honey-jar">
+                            <div class="honey-fill"></div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Wildflower Honey</h3>
+                        <p>A complex blend of wild mountain flowers with a delicate floral aroma.</p>
+                        <div class="product-meta">
+                            <div class="price">$18.99</div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <button class="btn buy-now">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <div class="honey-jar">
+                            <div class="honey-fill"></div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Forest Honey</h3>
+                        <p>Dark, rich honey with woody notes from ancient Caucasian forests.</p>
+                        <div class="product-meta">
+                            <div class="price">$22.99</div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                        <button class="btn buy-now">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <div class="honey-jar">
+                            <div class="honey-fill"></div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Mountain Honey</h3>
+                        <p>Rare honey from high-altitude flowers with a distinctive herbal profile.</p>
+                        <div class="product-meta">
+                            <div class="price">$24.99</div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <button class="btn buy-now">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health Benefits -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <div class="benefits-content">
+                <h2>Health Benefits of Raw Honey</h2>
+                <p>Raw Georgian honey isn't just delicious - it's packed with health benefits that have been cherished for centuries.</p>
+                <ul class="benefits-list">
+                    <li>Rich in antioxidants that combat free radicals</li>
+                    <li>Natural antibacterial and antifungal properties</li>
+                    <li>Soothes sore throats and coughs naturally</li>
+                    <li>Contains prebiotics to support gut health</li>
+                </ul>
+                <button class="btn buy-now">Learn More</button>
+            </div>
+            <div class="benefits-image">
+                <div class="benefits-honeycomb">
+                    <div class="honeycomb-overlay">
+                        <h3>Nature's Golden Elixir</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <p class="quote">This honey transports me straight to the Georgian countryside with every spoonful. The flavor is unlike anything I've ever tasted!</p>
+                    <div class="customer">
+                        <div class="customer-img">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="customer-info">
+                            <h4>Maria K.</h4>
+                            <p>Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-honey-drips">
+            <div class="honey-drip drip-1"></div>
+            <div class="honey-drip drip-2"></div>
+            <div class="honey-drip drip-3"></div>
+        </div>
+        <div class="container">
+            <div class="footer-logo">
+                <img src="images\logo.jpg" alt="Raw Georgian Honey Logo">
+                <p>For generations, our family has harvested honey in the pristine valleys of Georgia, where wildflowers bloom in abundance and bees thrive in untouched nature.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="#features"><i class="fas fa-chevron-right"></i> Our Story</a></li>
+                    <li><a href="#products"><i class="fas fa-chevron-right"></i> Shop</a></li>
+                    <li><a href="#benefits"><i class="fas fa-chevron-right"></i> Health Benefits</a></li>
+                    <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
+                </ul>
+            </div>
+            <div class="newsletter">
+                <h3>Join Our Hive</h3>
+                <p>Subscribe to our newsletter for exclusive offers, honey tips, and updates from our apiaries.</p>
+                <form>
+                    <input type="email" placeholder="Your Email Address">
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> info@rawgeorgianhoney.com</p>
+                    <p><i class="fas fa-phone"></i> +995 123 456 789</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Tbilisi, Georgia</p>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Raw Georgian Honey. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Header scroll effect
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+            
+            // Buy Now buttons functionality
+            const buyButtons = document.querySelectorAll('.buy-now');
+            buyButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Animate button
+                    this.classList.add('clicked');
+                    setTimeout(() => {
+                        this.classList.remove('clicked');
+                    }, 300);
+                    
+                    // Show alert
+                    setTimeout(() => {
+                        alert('Thank you for your interest in Raw Georgian Honey! You will be redirected to our shop.');
+                    }, 500);
+                });
+            });
+            
+            // Animate elements when they come into view
+            const animateOnScroll = () => {
+                const elements = document.querySelectorAll('.feature-card, .product-card, .benefits-content h2, .benefits-content p, .benefits-list li, .benefits-image');
+                
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.3;
+                    
+                    if (elementPosition < screenPosition) {
+                        element.style.animation = element.dataset.animation;
+                        element.style.opacity = '1';
+                        element.style.transform = 'translate(0)';
+                    }
+                });
+            };
+            
+            // Initialize scroll animation
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Initial check
+            
+            // Honey drip animation
+            const createHoneyDrips = () => {
+                const heroDrips = document.querySelector('.hero-honey-drips');
+                const footerDrips = document.querySelector('.footer-honey-drips');
+                
+                // Clear existing drips
+                heroDrips.innerHTML = '';
+                footerDrips.innerHTML = '';
+                
+                // Create hero drips
+                for (let i = 0; i < 6; i++) {
+                    const drip = document.createElement('div');
+                    drip.classList.add('honey-drip', `drip-${i+1}`);
+                    drip.style.left = `${10 + Math.random() * 80}%`;
+                    drip.style.width = `${20 + Math.random() * 30}px`;
+                    drip.style.height = `${80 + Math.random() * 100}px`;
+                    drip.style.animationDelay = `${Math.random() * 5}s`;
+                    heroDrips.appendChild(drip);
+                }
+                
+                // Create footer drips
+                for (let i = 0; i < 4; i++) {
+                    const drip = document.createElement('div');
+                    drip.classList.add('honey-drip', `drip-${i+1}`);
+                    drip.style.left = `${10 + Math.random() * 80}%`;
+                    drip.style.width = `${15 + Math.random() * 25}px`;
+                    drip.style.height = `${60 + Math.random() * 80}px`;
+                    drip.style.animationDelay = `${Math.random() * 5}s`;
+                    footerDrips.appendChild(drip);
+                }
+            };
+            
+            createHoneyDrips();
+            
+            // Mobile menu toggle
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const navMenu = document.querySelector('nav ul');
+            
+            if (mobileMenu) {
+                mobileMenu.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                });
+            }
+            
+            // Smooth scrolling for navigation links
+            const navLinks = document.querySelectorAll('nav a, .footer-links a');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    if (this.getAttribute('href').startsWith('#')) {
+                        e.preventDefault();
+                        
+                        const targetId = this.getAttribute('href');
+                        const targetSection = document.querySelector(targetId);
+                        
+                        if (targetSection) {
+                            window.scrollTo({
+                                top: targetSection.offsetTop - 80,
+                                behavior: 'smooth'
+                            });
+                            
+                            // Close mobile menu if open
+                            if (navMenu.classList.contains('active')) {
+                                navMenu.classList.remove('active');
+                            }
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
